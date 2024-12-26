@@ -479,44 +479,6 @@ body {
 }
 /* gift end */
 
-/* rsvp */
-.rsvp {
-  background-color: var(
-    --bg,
-    #393e46
-  ); /* Ensure a fallback color if --bg is not defined */
-}
-
-.rsvp h2 {
-  font-size: 4.5rem;
-  margin-bottom: 1rem;
-}
-
-.rsvp p {
-  color: white;
-  font-size: 1.1rem;
-}
-
-.rsvp form label {
-  color: white;
-}
-
-.rsvp button {
-  background-color: #929aab;
-  color: white;
-  border: 1px solid #929aab; /* Consistent border color with button */
-  transition: all 0.3s ease;
-}
-
-.rsvp button:hover {
-  background-color: white;
-  color: #393e46;
-  border: 1px solid #393e46; /* Match hover state with text color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-}
-
-/* rsvp end */
-
 /* footer */
 footer {
   padding: 2rem;
