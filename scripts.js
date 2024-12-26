@@ -39,7 +39,7 @@ function enableScroll() {
 
 // Memulai pemutaran audio
 function playAudio() {
-  song.volume = 0.1;
+  song.volume = 0.03;
   audioIconWrapper.style.display = "flex";
   song.play();
   isPlaying = true;
@@ -144,13 +144,15 @@ function copyText(element) {
 }
 
 // Validasi Formulir
-document.getElementById("my-form")?.addEventListener("submit", function (event) {
-  const statusSelect = document.getElementById("status");
-  if (statusSelect.value === "") {
-    event.preventDefault(); // Mencegah pengiriman formulir
-    alert("Konfirmasi wajib dipilih!"); // Menampilkan pesan kesalahan
-  }
-});
+document
+  .getElementById("my-form")
+  ?.addEventListener("submit", function (event) {
+    const statusSelect = document.getElementById("status");
+    if (statusSelect.value === "") {
+      event.preventDefault(); // Mencegah pengiriman formulir
+      alert("Konfirmasi wajib dipilih!"); // Menampilkan pesan kesalahan
+    }
+  });
 
 // Scroll Animation
 $(document).ready(function () {
