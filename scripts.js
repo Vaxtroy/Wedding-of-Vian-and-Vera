@@ -64,31 +64,39 @@ disableScroll();
 
 // Form submission
 window.addEventListener("load", function () {
+  // Menangani pengiriman form RSVP jika masih ada
   const form = document.getElementById("my-form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: "POST",
-      body: data,
-    })
-      .then(() => {
-        alert("Konfirmasi kehadiran berhasil terkirim!");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: "POST",
+        body: data,
       })
-      .catch((error) => {
-        alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
-      });
-  });
+        .then(() => {
+          alert("Konfirmasi kehadiran berhasil terkirim!");
+        })
+        .catch((error) => {
+          alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
+        });
+    });
+  }
 
   // Query Parameters
   const urlParams = new URLSearchParams(window.location.search);
   const nama = urlParams.get("n") || "";
   const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
   const namaContainer = document.querySelector(".hero h4 span");
-  namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+  if (namaContainer) {
+    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+  }
 
-  document.querySelector("#nama").value = nama;
+  const namaInput = document.querySelector("#nama");
+  if (namaInput) {
+    namaInput.value = nama;
+  }
 
   // Offcanvas Navbar
   const offcanvasNavbar = document.getElementById("offcanvasNavbar");
@@ -136,7 +144,7 @@ function copyText(element) {
 }
 
 // Validasi Formulir
-document.getElementById("my-form").addEventListener("submit", function (event) {
+document.getElementById("my-form")?.addEventListener("submit", function (event) {
   const statusSelect = document.getElementById("status");
   if (statusSelect.value === "") {
     event.preventDefault(); // Mencegah pengiriman formulir
@@ -156,4 +164,3 @@ $(document).ready(function () {
     );
   });
 });
-
