@@ -39,7 +39,7 @@ function enableScroll() {
 
 // Memulai pemutaran audio
 function playAudio() {
-  song.volume = 0.03;
+  song.volume = 0.07;
   audioIconWrapper.style.display = "flex";
   song.play();
   isPlaying = true;
