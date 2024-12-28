@@ -1,989 +1,465 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="img/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/apple-touch-icon.png"
-    />
-
-    <!-- Manifest -->
-    <link rel="manifest" href="img/site.webmanifest" />
-
-    <!-- Meta for Apple -->
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-
-    <title>The Wedding of Vian & Vera</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel:wght@400..900&family=Jura:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome (Opsional) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <!-- Hero -->
-    <section
-      id="hero"
-      class="hero text-center d-flex justify-content-center align-items-center text-white p-3 mx-auto"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
-      <main>
-        <h4>Kepada <span>Bapak/Ibu/Saudara/i,</span></h4>
-        <h1>VIAN & VERA</h1>
-        <p>Akan melangsungkan pemberkatan perkawinan dalam:</p>
-
-        <!-- Countdown Wedding -->
-        <div
-          class="row my-3 d-flex justify-content-center"
-          id="countdown-wedding"
-          data-aos="zoom-in"
-          data-aos-duration="3000"
-        >
-          <div class="col-lg-2 col-3">
-            <div class="text-center p-2 rounded text-light countdown-item">
-              <h5>0</h5>
-              <span>Hari</span>
-            </div>
-          </div>
-          <div class="col-lg-2 col-3">
-            <div class="text-center p-2 rounded text-light countdown-item">
-              <h5>0</h5>
-              <span>Jam</span>
-            </div>
-          </div>
-          <div class="col-lg-2 col-3">
-            <div class="text-center p-2 rounded text-light countdown-item">
-              <h5>0</h5>
-              <span>Menit</span>
-            </div>
-          </div>
-          <div class="col-lg-2 col-3">
-            <div class="text-center p-2 rounded text-light countdown-item">
-              <h5>0</h5>
-              <span>Detik</span>
-            </div>
-          </div>
-        </div>
-
-        <a href="#home" class="btn btn-lg" onClick="enableScroll()">
-          <i
-            class="fa fa-fw fa-envelope-open-text"
-            style="margin-right: 3px"
-          ></i>
-          Lihat Undangan
-        </a>
-      </main>
-    </section>
-
-    <!-- Nav -->
-    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#" style="font-size: 2rem"
-          >#imVIANnyaVERA</a
-        >
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ViVe</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#info">Location</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#gift">Gift</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Hero End -->
-
-    <!-- home -->
-    <section id="home" class="home">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div
-            class="col-md-8 text-center"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <h2 class="section-title" style="color: #393e46">
-              Pemberkatan Perkawinan Ekumenis
-            </h2>
-
-            <div class="container-acara max-w-lg mx-auto p-4 acara">
-              <p
-                class="text-lg font-bold"
-                style="
-                  font-family: Palatino;
-                  font-size: 2.5rem;
-                  margin-top: 1rem;
-                  font-weight: 660;
-                "
-              >
-                Yang akan dilaksanakan pada:
-              </p>
-              <div
-                class="d-flex justify-content-center align-items-center mt-1"
-                style="font-family: Palatino"
-              >
-                <div class="text-center">
-                  <p class="event-text">Sabtu</p>
-                </div>
-                <div class="border-left border-gray-400 height-12"></div>
-                <div class="text-center">
-                  <p class="event-text">25</p>
-                </div>
-                <div class="border-left border-gray-400 height-12"></div>
-                <div class="text-center">
-                  <p class="event-text">01</p>
-                </div>
-                <div class="border-left border-gray-400 height-12"></div>
-                <div class="text-center">
-                  <p class="event-text">2025</p>
-                </div>
-              </div>
-            </div>
-
-            <p style="margin-top: -3rem">
-              Dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu,
-              Saudara/i, untuk hadir pada acara pernikahan kami.
-            </p>
-          </div>
-        </div>
-
-        <div class="row couple" style="overflow: hidden">
-          <div class="col-lg-6">
-            <div class="row">
-              <div
-                class="col-8 text-end"
-                data-aos="fade-right"
-                data-aos-duration="1500"
-              >
-                <h3>I Putu Budhi Diovian</h3>
-                <p class="subtitle">Putra Pertama, Anak Sulung</p>
-                <p class="parent-info">
-                  dari Bapak <strong>I Putu Budhi Nanjaya</strong> <br />
-                  dan <br />
-                  Ibu <strong>Ruciwati</strong>
-                </p>
-              </div>
-              <div class="col-4" data-aos="fade-right" data-aos-duration="1300">
-                <img
-                  src="img/vian2.png"
-                  alt="Foto Vian"
-                  class="img-responsive rounded-circle"
-                />
-
-                <div class="vian-instagram-button-container">
-                  <a
-                    href="https://www.instagram.com/diovian_?igsh=MWsxOHl5ZjBwdWh1cw=="
-                    target="_blank"
-                    class="instagram-button-vian"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <span class="heart"><i class="bi bi-suit-heart-fill"></i></span>
-
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-4" data-aos="fade-left" data-aos-duration="1300">
-                <img
-                  src="img/vera2.png"
-                  alt="Foto Vera"
-                  class="img-responsive rounded-circle"
-                />
-
-                <div class="vera-instagram-button-container">
-                  <a
-                    href="https://www.instagram.com/fideliaveraa?igsh=MWJkbXBmenp5bTJlNw=="
-                    target="_blank"
-                    class="instagram-button-vera"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-8" data-aos="fade-left" data-aos-duration="1300">
-                <h3>Fidelia Vera Sentosa</h3>
-                <p class="subtitle">Putri ke-3, Anak Bungsu</p>
-                <p class="parent-info">
-                  dari Ibu <strong>Lani Kristanti</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            style="margin-top: 4rem; font-family: Cinzel"
-            class="col-md-8 mx-auto text-center"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <p class="verse" style="font-weight: 550; line-height: 1.5">
-              Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan
-              ibunya dan bersatu dengan istrinya, sehingga keduanya itu menjadi
-              satu daging. Demikianlah mereka bukan lagi dua, melainkan satu.
-              Karena itu, apa yang telah dipersatukan Allah, tidak boleh
-              diceraikan manusia.
-            </p>
-            <p
-              class="reference"
-              style="font-weight: 650; line-height: 1.5; margin-top: -0.5rem"
-            >
-              Matius 19:5-6
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- home end -->
-
-    <!-- info -->
-    <section id="info" class="info" style="overflow: hidden">
-      <div class="large-screen">
-        <div class="container">
-          <div
-            class="row justify-content-center"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-            data-aos-delay="100"
-          >
-            <div class="col-md-8 col-10 text-center">
-              <h2>Lokasi Acara</h2>
-
-              <div
-                style="
-                  display: flex;
-                  justify-content: center;
-                  margin-top: 20px;
-                  gap: 20px;
-                "
-                class="maps"
-              >
-                <!-- Google Maps: GKI Coyudan -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid"
-                  width="100%"
-                  height="250"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="maps-coyudan"
-                ></iframe>
-
-                <!-- Google Maps: Orient Restaurant -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444198552!2d110.79509311024901!3d-7.563045092419419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734522702215!5m2!1sid!2sid"
-                  width="100%"
-                  height="250"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="maps-orient"
-                ></iframe>
-              </div>
-
-              <div
-                class="maps-btn"
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  margin-top: 20px;
-                  margin-bottom: 15px;
-                "
-              >
-                <!-- Buttons for opening maps -->
-                <a
-                  href="https://maps.app.goo.gl/quqwNQ65B6zudngF8"
-                  target="_blank"
-                  class="btn btn-light btn-sm coyudanbtn"
-                  >GKI COYUDAN</a
-                >
-                <a
-                  href="https://maps.app.goo.gl/H6itihA6nC3k2H5t5"
-                  target="_blank"
-                  class="btn btn-light btn-sm orientbtn"
-                  >ORIENT RESTAURANT (Lt.1)</a
-                >
-              </div>
-
-              <p class="description">
-                Mohon untuk memperhatikan jadwal dan lokasi yang telah tertera.
-              </p>
-            </div>
-          </div>
-
-          <div class="row justify-content-center mt-4">
-            <div
-              class="col-md-5 col-10 text-end"
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
-            >
-              <div class="card text-center text-bg-light mb-5">
-                <div class="card-header">Pemberkatan & Peneguhan Ekumenis</div>
-                <div class="card-body">
-                  <div class="row justify-content-center">
-                    <div class="col-md-6">
-                      <i class="bi bi-clock d-block"></i>
-                      <span>14.00 - Selesai</span>
-                    </div>
-                    <div class="col-md-6">
-                      <i class="bi bi-calendar4-event d-block"></i>
-                      <span>Sabtu, 25 Januari 2025</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  Jl. DR. Radjiman No.125, Jayengan, Kec. Serengan, Kota
-                  Surakarta, Jawa Tengah
-                </div>
-                <a
-                  href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z"
-                  class="btn btn-lg btn-pink rounded-pill"
-                  style="color: #f7f7f7"
-                  target="_blank"
-                >
-                  <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
-                </a>
-              </div>
-            </div>
-
-            <div
-              class="col-md-5 col-10 text-end"
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="linear"
-              data-aos-duration="1500"
-            >
-              <div class="card text-center text-bg-light">
-                <div class="card-header">Intimate Dinner</div>
-                <div class="card-body">
-                  <div class="row justify-content-center">
-                    <div class="col-md-6">
-                      <i class="bi bi-clock d-block"></i>
-                      <span>18.00 - Selesai</span>
-                    </div>
-                    <div class="col-md-6">
-                      <i class="bi bi-calendar4-event d-block"></i>
-                      <span>Sabtu, 25 Januari 2025</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  Jl. Slamet Riyadi No.397, Sondakan, Kec. Laweyan, Kota
-                  Surakarta, Jawa Tengah
-                </div>
-                <a
-                  href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z"
-                  class="btn btn-lg btn-pink rounded-pill"
-                  style="color: #f7f7f7"
-                  target="_blank"
-                >
-                  <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- small screen -->
-      <div class="small-screen">
-        <div class="col-md-8 col-10 text-center mx-auto">
-          <h2
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-            data-aos-delay="100"
-          >
-            Informasi Acara
-          </h2>
-
-          <div
-            class="maps"
-            style="margin-top: 20px; justify-content: center"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid"
-              width="50%"
-              height="230"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="maps-coyudan"
-            ></iframe>
-
-            <a
-              href="https://maps.app.goo.gl/quqwNQ65B6zudngF8"
-              target="_blank"
-              class="btn btn-light btn-sm coyudanbtn"
-              style="margin-top: 1rem"
-              >GKI COYUDAN</a
-            >
-          </div>
-
-          <div
-            class="col-md-5 col-10 card-small mx-auto"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-          >
-            <div class="card text-center text-bg-light mb-5">
-              <div class="card-header">Pemberkatan & Peneguhan Ekumenis</div>
-              <div class="card-body">
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <i class="bi bi-clock d-block"></i>
-                    <span>14.00 - Selesai</span>
-                  </div>
-                  <div class="col-md-6">
-                    <i class="bi bi-calendar4-event d-block"></i>
-                    <span>Sabtu, 25 Januari 2025</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                Jl. DR. Radjiman No.125, Jayengan, Kec. Serengan, Kota
-                Surakarta, Jawa Tengah
-              </div>
-              <a
-                href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z"
-                class="btn btn-lg btn-pink rounded-pill"
-                style="color: #f7f7f7"
-                target="_blank"
-              >
-                <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="maps"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-            data-aos-delay="100"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444129084!2d110.7976734!3d-7.5630451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734607808590!5m2!1sid!2sid"
-              height="230"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="maps-coyudan"
-            ></iframe>
-            <a
-              href="https://maps.app.goo.gl/fgn3uWyTdyGrDVD6A"
-              target="_blank"
-              class="btn btn-light btn-sm orientbtn"
-              style="margin-top: 1rem"
-              >ORIENT RESTAURANT (Lt.1)</a
-            >
-          </div>
-
-          <div
-            class="col-md-5 col-10 card-small mx-auto"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-          >
-            <div class="card text-center text-bg-light">
-              <div class="card-header">Intimate Dinner</div>
-              <div class="card-body">
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <i class="bi bi-clock d-block"></i>
-                    <span>18.00 - Selesai</span>
-                  </div>
-                  <div class="col-md-6">
-                    <i class="bi bi-calendar4-event d-block"></i>
-                    <span>Sabtu, 25 Januari 2025</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                Jl. Slamet Riyadi No.397, Sondakan, Kec. Laweyan, Kota
-                Surakarta, Jawa Tengah
-              </div>
-              <a
-                href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z"
-                class="btn btn-lg btn-white rounded-pill mb-1"
-                style="color: #f7f7f7"
-                target="_blank"
-              >
-                <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
-              </a>
-            </div>
-          </div>
-
-          <p
-            class="description"
-            style="margin-top: 2.5rem"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1700"
-          >
-            Mohon untuk memperhatikan jadwal dan lokasi yang telah tertera.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- info end -->
-
-    <!-- gallery -->
-    <section id="gallery" class="gallery">
-      <div
-        class="container"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-easing="linear"
-      >
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
-            <h2 style="color: #393e46">Galeri</h2>
-          </div>
-        </div>
-
-        <div
-          class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
-        >
-          <!-- Image item 1 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/1.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/1.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-          <!-- Image item 2 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/2.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/2.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-          <!-- Image item 3 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/3.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/3.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-          <!-- Image item 4 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/4.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/4.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-          <!-- Image item 5 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/5.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/5.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-          <!-- Image item 6 -->
-          <div class="col mt-3">
-            <a
-              href="img/thumbnail/6.jpg"
-              data-toggle="lightbox"
-              data-caption="Vian & Vera"
-              data-gallery="mygallery"
-            >
-              <img
-                src="img/thumbnail/6.jpg"
-                loading="lazy"
-                alt="Vian & Vera"
-                class="img-fluid w-100 rounded"
-                style="border: 2px solid black"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- gallery end -->
-
-    <!-- gift -->
-    <section id="gift" class="gift py-5" style="padding-top: 100px">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
-            <h2 class="huruf-sambung" style="color: #393e46">Wedding Gift</h2>
-            <p>
-              Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan
-              dapat melalui rekening di bawah ini.
-            </p>
-          </div>
-          <div class="col-lg-6 text-center">
-            <button
-              type="button"
-              class="btn btn-lg btn-pink mb-4 rounded-pill"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseHadiah"
-            >
-              <i class="fa fa-fw fa-gift"></i> Kirim Hadiah
-            </button>
-
-            <!-- Collapse Container -->
-            <div class="collapse" id="collapseHadiah">
-              <!-- Vian -->
-              <div class="gift body">
-                <div class="container2">
-                  <header>
-                    <span class="logo-mandiri">
-                      <img src="img/Mandiri.png" alt="Logo Mandiri" />
-                    </span>
-                    <img
-                      src="img/chip.png"
-                      alt="Chip"
-                      class="chip"
-                      style="margin-top: 1rem"
-                    />
-                  </header>
-                  <div class="card-detail">
-                    <div
-                      class="name-number"
-                      style="margin-bottom: 7rem; margin-left: 1.5rem"
-                    >
-                      <h5 class="number">9000 0438 37781</h5>
-                      <div class="valid-date" style="margin-left: 0.1rem">
-                        <h6>
-                          Valid <br />
-                          Thru
-                        </h6>
-                        <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                          25/01/25
-                        </h5>
-                      </div>
-                      <h6 class="name">IPUTU BUDHI DIOVIAN</h6>
-                    </div>
-                    <img
-                      class="logo2-visa"
-                      src="img/Visa.png"
-                      alt="Visa Logo"
-                    />
-                  </div>
-                  <a
-                    style="cursor: pointer"
-                    onclick="copyText(this)"
-                    class="copy-button btn btn-light mt-3"
-                  >
-                    <i class="fas fa-fw fa-copy"></i> Copy
-                  </a>
-                </div>
-              </div>
-
-              <!-- Vera -->
-              <div class="gift body" style="margin-top: 1rem">
-                <div class="container2">
-                  <header>
-                    <span class="logo">
-                      <img src="img/Logo BCA_Putih.png" alt="Logo BCA" />
-                    </span>
-                    <img src="img/chip.png" alt="Chip" class="chip" />
-                  </header>
-                  <div class="card-detail">
-                    <div
-                      class="name-number"
-                      style="margin-bottom: 7rem; margin-left: 1.5rem"
-                    >
-                      <h5 class="number">773 525 2020</h5>
-                      <div class="valid-date" style="margin-left: 0.1rem">
-                        <h6>
-                          Valid <br />
-                          Thru
-                        </h6>
-                        <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                          25/01/25
-                        </h5>
-                      </div>
-                      <h6 class="name">FIDELIA VERA SENTOSA</h6>
-                    </div>
-                    <img class="logo2" src="img/logo.png" alt="Logo" />
-                  </div>
-                  <a
-                    style="cursor: pointer"
-                    onclick="copyText(this)"
-                    class="copy-button btn btn-light mt-3"
-                  >
-                    <i class="fas fa-fw fa-copy"></i> Copy
-                  </a>
-                </div>
-              </div>
-
-              <!-- Thanks Message -->
-              <div class="gift body text-center mt-4">
-                <h3 class="huruf-sambung" style="color: #393e46">
-                  <span
-                    style="font-family: Playfair Display; font-weight: bold"
-                  >
-                    Terima Kasih
-                  </span>
-                  <br />
-                  <span
-                    style="
-                      font-size: 1.5rem;
-                      font-family: Work Sans;
-                      font-weight: normal;
-                    "
-                  >
-                    Kami yang berbahagia,
-                  </span>
-                  <br />
-                  <span style="font-family: Charm">Vian & Vera.</span>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- gift end -->
-
-    <!-- footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <small class="block"
-              >&copy; 2025 Vian & Vera. All Rights Reserved.</small
-            >
-            <small class="block"
-              >Designed by
-              <a
-                href="https://www.instagram.com/leonrdvan_?igsh=MXZidDJ1N3R3bDVlbg=="
-                >@Leonard Van</a
-              >.</small
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer end -->
-
-    <!-- audio -->
-    <div id="audio-container">
-      <audio id="song" autoplay loop>
-        <source
-          src="audio/Its Been a Long Long Time Instrumental.mp3"
-          type="audio/mp3"
-        />
-      </audio>
-
-      <div class="audio-icon-wrapper" style="display: none">
-        <i class="bi bi-disc"></i>
-      </div>
-    </div>
-    <!-- audio end -->
-
-    <script src="scripts.js"></script>
-
-    <!-- jQuery (pastikan dimuat terlebih dahulu jika menggunakan jQuery) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Lightbox JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"
-      integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- BS5 Lightbox -->
-    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-
-    <!-- AOS (Animate on Scroll) -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-      var countdownDate = new Date("Jan 25, 2025 14:00:00").getTime();
-
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countdownDate - now;
-
-        if (distance < 0) {
-          // Jika waktu telah habis, tampilkan pesan atau hentikan timer
-          clearInterval(x);
-          document.getElementById(
-            "countdown-wedding"
-          ).innerHTML = `<div class="col-12 text-center">
-         <h5>Acara telah dimulai!</h5>
-       </div>`;
-          return;
-        }
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown-wedding").innerHTML = `
-    <div class="col-lg-1 col-3">
-      <div class="text-center p-2 rounded text-light">
-        <h5>${days}</h5> Hari
-      </div>
-    </div>
-    <div class="col-lg-1 col-3">
-      <div class="text-center p-2 rounded text-light">
-        <h5>${hours}</h5> Jam
-      </div>
-    </div>
-    <div class="col-lg-1 col-3">
-      <div class="text-center p-2 rounded text-light">
-        <h5>${minutes}</h5> Menit
-      </div>
-    </div>
-    <div class="col-lg-1 col-3">
-      <div class="text-center p-2 rounded text-light">
-        <h5>${seconds}</h5> Detik
-      </div>
-    </div>`;
-      }, 1000);
-    </script>
-  </body>
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon type=image/png href=img/favicon-96x96.png sizes=96x96>
+<link rel=icon type=image/svg+xml href=img/favicon.svg>
+<link rel="shortcut icon" href=img/favicon.ico>
+<link rel=apple-touch-icon sizes=180x180 href=img/apple-touch-icon.png>
+<link rel=manifest href=img/site.webmanifest>
+<meta name=apple-mobile-web-app-title content=MyWebSite>
+<title>The Wedding of Vian & Vera</title>
+<link rel=preload href=styles.css as=style onload='this.onload=null,this.rel="stylesheet"'>
+<noscript><link rel=stylesheet href=styles.css></noscript>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH crossorigin=anonymous>
+<link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel:wght@400..900&family=Jura:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css>
+<link href=https://unpkg.com/aos@2.3.1/dist/aos.css rel=stylesheet>
+</head>
+<body>
+<section id=hero class="hero text-center d-flex justify-content-center align-items-center text-white p-3 mx-auto" data-aos=fade-up data-aos-duration=3000>
+<main>
+<h4>Kepada <span>Bapak/Ibu/Saudara/i,</span></h4>
+<h1>VIAN & VERA</h1>
+<p>Akan melangsungkan pemberkatan perkawinan dalam:</p>
+<div class="row my-3 d-flex justify-content-center" id=countdown-wedding data-aos=zoom-in data-aos-duration=3000>
+<div class="col-lg-2 col-3">
+<div class="text-center p-2 rounded text-light countdown-item">
+<h5>0</h5>
+<span>Hari</span>
+</div>
+</div>
+<div class="col-lg-2 col-3">
+<div class="text-center p-2 rounded text-light countdown-item">
+<h5>0</h5>
+<span>Jam</span>
+</div>
+</div>
+<div class="col-lg-2 col-3">
+<div class="text-center p-2 rounded text-light countdown-item">
+<h5>0</h5>
+<span>Menit</span>
+</div>
+</div>
+<div class="col-lg-2 col-3">
+<div class="text-center p-2 rounded text-light countdown-item">
+<h5>0</h5>
+<span>Detik</span>
+</div>
+</div>
+</div>
+<a href=#home class="btn btn-lg" onClick=enableScroll()>
+<i class="fa fa-fw fa-envelope-open-text" style=margin-right:3px></i>
+Lihat Undangan
+</a>
+</main>
+</section>
+<nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+<div class=container>
+<a class=navbar-brand href=# style=font-size:2rem>#imVIANnyaVERA</a>
+<button class="navbar-toggler border-0" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasNavbar aria-controls=offcanvasNavbar aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="offcanvas offcanvas-end" tabindex=-1 id=offcanvasNavbar aria-labelledby=offcanvasNavbarLabel>
+<div class=offcanvas-header>
+<h5 class=offcanvas-title id=offcanvasNavbarLabel>
+#imVIANnyaVERA
+</h5>
+<button type=button class=btn-close data-bs-dismiss=offcanvas aria-label=Close></button>
+</div>
+<div class=offcanvas-body>
+<div class="navbar-nav ms-auto">
+<a class=nav-link href=#home>Home</a>
+<a class=nav-link href=#info>Location</a>
+<a class=nav-link href=#gallery>Gallery</a>
+<a class=nav-link href=#gift>Gift</a>
+<a class=nav-link href=#rsvp>RSVP</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<section id=home class=home>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-md-8 text-center" data-aos=fade-up data-aos-duration=1500>
+<h2 class=section-title style=color:#393e46>
+Pemberkatan Perkawinan Ekumenis
+</h2>
+<div class="container-acara max-w-lg mx-auto p-4 acara">
+<p class="text-lg font-bold" style=font-family:Palatino;font-size:2.5rem;margin-top:1rem;font-weight:660>
+Yang akan dilaksanakan pada:
+</p>
+<div class="d-flex justify-content-center align-items-center mt-1" style=font-family:Palatino>
+<div class=text-center>
+<p class=event-text>Sabtu</p>
+</div>
+<div class="border-left border-gray-400 height-12"></div>
+<div class=text-center>
+<p class=event-text>25</p>
+</div>
+<div class="border-left border-gray-400 height-12"></div>
+<div class=text-center>
+<p class=event-text>01</p>
+</div>
+<div class="border-left border-gray-400 height-12"></div>
+<div class=text-center>
+<p class=event-text>25</p>
+</div>
+</div>
+</div>
+<p style=margin-top:-3rem>
+Dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.
+</p>
+</div>
+</div>
+<div class="row couple" style=overflow:hidden>
+<div class=col-lg-6>
+<div class=row>
+<div class="col-8 text-end" data-aos=fade-right data-aos-duration=1500>
+<h3>I Putu Budhi Diovian</h3>
+<p class=subtitle>Putra Pertama, Anak Sulung</p>
+<p class=parent-info>
+dari Bapak <strong>I Putu Budhi Nanjaya</strong> <br>
+dan <br>
+Ibu <strong>Ruciwati</strong>
+</p>
+</div>
+<div class=col-4 data-aos=fade-right data-aos-duration=1300>
+<img src=img/vian2.png alt="Foto Vian" class="img-responsive rounded-circle">
+<div class=vian-instagram-button-container>
+<a href="https://www.instagram.com/diovian_?igsh=MWsxOHl5ZjBwdWh1cw==" target=_blank class=instagram-button-vian>
+<i class="fab fa-instagram"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class=heart><i class="bi bi-suit-heart-fill"></i></span>
+<div class=col-lg-6>
+<div class=row>
+<div class=col-4 data-aos=fade-left data-aos-duration=1300>
+<img src=img/vera2.png alt="Foto Vera" class="img-responsive rounded-circle">
+<div class=vera-instagram-button-container>
+<a href="https://www.instagram.com/fideliaveraa?igsh=MWJkbXBmenp5bTJlNw==" target=_blank class=instagram-button-vera>
+<i class="fab fa-instagram"></i>
+</a>
+</div>
+</div>
+<div class=col-8 data-aos=fade-left data-aos-duration=1300>
+<h3>Fidelia Vera Sentosa</h3>
+<p class=subtitle>Putri ke-3, Anak Bungsu</p>
+<p class=parent-info>
+dari Ibu <strong>Lani Kristanti</strong>
+</p>
+</div>
+</div>
+</div>
+<div style=margin-top:4rem;font-family:Cinzel class="col-md-8 mx-auto text-center" data-aos=fade-up data-aos-duration=1000>
+<p class=verse style=font-weight:550;line-height:1.5>
+Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan ibunya dan bersatu dengan istrinya, sehingga keduanya itu menjadi satu daging. Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia.
+</p>
+<p class=reference style=font-weight:650;line-height:1.5;margin-top:-.5rem>
+Matius 19:5-6
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id=info class=info style=overflow:hidden>
+<div class=large-screen>
+<div class=container>
+<div class="row justify-content-center" data-aos=fade-up data-aos-easing=linear data-aos-duration=1700 data-aos-delay=100>
+<div class="col-md-8 col-10 text-center">
+<h2>Lokasi Acara</h2>
+<div style=display:flex;justify-content:center;margin-top:20px;gap:20px class=maps>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid" width=100% height=250 style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade class=maps-coyudan></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444198552!2d110.79509311024901!3d-7.563045092419419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734522702215!5m2!1sid!2sid" width=100% height=250 style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade class=maps-orient></iframe>
+</div>
+<div class=maps-btn style=display:flex;justify-content:space-between;margin-top:20px;margin-bottom:15px>
+<a href=https://maps.app.goo.gl/quqwNQ65B6zudngF8 target=_blank class="btn btn-light btn-sm coyudanbtn">GKI COYUDAN</a>
+<a href=https://maps.app.goo.gl/H6itihA6nC3k2H5t5 target=_blank class="btn btn-light btn-sm orientbtn">ORIENT RESTAURANT (Lt.1)</a>
+</div>
+<p class=description>
+Mohon untuk memperhatikan jadwal dan lokasi yang telah tertera.
+</p>
+</div>
+</div>
+<div class="row justify-content-center mt-4">
+<div class="col-md-5 col-10 text-end" data-aos=fade-right data-aos-offset=300 data-aos-easing=linear data-aos-duration=1500>
+<div class="card text-center text-bg-light mb-5">
+<div class=card-header>Pemberkatan & Peneguhan Ekumenis</div>
+<div class=card-body>
+<div class="row justify-content-center">
+<div class=col-md-6>
+<i class="bi bi-clock d-block"></i>
+<span>14.00 - Selesai</span>
+</div>
+<div class=col-md-6>
+<i class="bi bi-calendar4-event d-block"></i>
+<span>Sabtu, 25 Januari 2025</span>
+</div>
+</div>
+</div>
+<div class=card-footer>
+Jl. DR. Radjiman No.125, Jayengan, Kec. Serengan, Kota Surakarta, Jawa Tengah
+</div>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z" class="btn btn-lg btn-pink rounded-pill" style=color:#f7f7f7 target=_blank>
+<i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+</a>
+</div>
+</div>
+<div class="col-md-5 col-10 text-end" data-aos=fade-left data-aos-offset=300 data-aos-easing=linear data-aos-duration=1500>
+<div class="card text-center text-bg-light">
+<div class=card-header>Intimate Dinner</div>
+<div class=card-body>
+<div class="row justify-content-center">
+<div class=col-md-6>
+<i class="bi bi-clock d-block"></i>
+<span>18.00 - Selesai</span>
+</div>
+<div class=col-md-6>
+<i class="bi bi-calendar4-event d-block"></i>
+<span>Sabtu, 25 Januari 2025</span>
+</div>
+</div>
+</div>
+<div class=card-footer>
+Jl. Slamet Riyadi No.397, Sondakan, Kec. Laweyan, Kota Surakarta, Jawa Tengah
+</div>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z" class="btn btn-lg btn-pink rounded-pill" style=color:#f7f7f7 target=_blank>
+<i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=small-screen>
+<div class="col-md-8 col-10 text-center mx-auto">
+<h2 data-aos=fade-down data-aos-easing=linear data-aos-duration=1700 data-aos-delay=100>
+Lokasi Acara
+</h2>
+<div class=maps style=margin-top:20px;justify-content:center data-aos=fade-up data-aos-easing=linear data-aos-duration=1700>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid" width=50% height=230 style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade class=maps-coyudan></iframe>
+<a href=https://maps.app.goo.gl/quqwNQ65B6zudngF8 target=_blank class="btn btn-light btn-sm coyudanbtn" style=margin-top:1rem>GKI COYUDAN</a>
+</div>
+<div class="col-md-5 col-10 card-small mx-auto" data-aos=fade-up data-aos-easing=linear data-aos-duration=1700>
+<div class="card text-center text-bg-light mb-5">
+<div class=card-header>Pemberkatan & Peneguhan Ekumenis</div>
+<div class=card-body>
+<div class="row justify-content-center">
+<div class=col-md-6>
+<i class="bi bi-clock d-block"></i>
+<span>14.00 - Selesai</span>
+</div>
+<div class=col-md-6>
+<i class="bi bi-calendar4-event d-block"></i>
+<span>Sabtu, 25 Januari 2025</span>
+</div>
+</div>
+</div>
+<div class=card-footer>
+Jl. DR. Radjiman No.125, Jayengan, Kec. Serengan, Kota Surakarta, Jawa Tengah
+</div>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z" class="btn btn-lg btn-pink rounded-pill" style=color:#f7f7f7 target=_blank>
+<i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+</a>
+</div>
+</div>
+<div class=maps data-aos=fade-up data-aos-easing=linear data-aos-duration=1700 data-aos-delay=100>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444129084!2d110.7976734!3d-7.5630451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734607808590!5m2!1sid!2sid" height=230 style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade class=maps-coyudan></iframe>
+<a href=https://maps.app.goo.gl/fgn3uWyTdyGrDVD6A target=_blank class="btn btn-light btn-sm orientbtn" style=margin-top:1rem>ORIENT RESTAURANT (Lt.1)</a>
+</div>
+<div class="col-md-5 col-10 card-small mx-auto" data-aos=fade-up data-aos-easing=linear data-aos-duration=1700>
+<div class="card text-center text-bg-light">
+<div class=card-header>Intimate Dinner</div>
+<div class=card-body>
+<div class="row justify-content-center">
+<div class=col-md-6>
+<i class="bi bi-clock d-block"></i>
+<span>18.00 - Selesai</span>
+</div>
+<div class=col-md-6>
+<i class="bi bi-calendar4-event d-block"></i>
+<span>Sabtu, 25 Januari 2025</span>
+</div>
+</div>
+</div>
+<div class=card-footer>
+Jl. Slamet Riyadi No.397, Sondakan, Kec. Laweyan, Kota Surakarta, Jawa Tengah
+</div>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z" class="btn btn-lg btn-white rounded-pill mb-1" style=color:#f7f7f7 target=_blank>
+<i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+</a>
+</div>
+</div>
+<p class=description style=margin-top:2.5rem data-aos=fade-up data-aos-easing=linear data-aos-duration=1700>
+Mohon untuk memperhatikan jadwal dan lokasi yang telah tertera.
+</p>
+</div>
+</div>
+</section>
+<section id=gallery class=gallery>
+<div class=container data-aos=fade-up data-aos-duration=1500 data-aos-easing=linear>
+<div class="row justify-content-center">
+<div class="col-md-8 col-10 text-center">
+<h2 style=color:#393e46>Galeri</h2>
+</div>
+</div>
+<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+<div class="col mt-3">
+<a href=img/thumbnail/1.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/1.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+<div class="col mt-3">
+<a href=img/thumbnail/2.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/2.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+<div class="col mt-3">
+<a href=img/thumbnail/3.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/3.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+<div class="col mt-3">
+<a href=img/thumbnail/4.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/4.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+<div class="col mt-3">
+<a href=img/thumbnail/5.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/5.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+<div class="col mt-3">
+<a href=img/thumbnail/6.jpg data-toggle=lightbox data-caption="Vian & Vera" data-gallery=mygallery>
+<img src=img/thumbnail/6.jpg loading=lazy alt="Vian & Vera" class="img-fluid w-100 rounded" style="border:2px solid #000">
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id=gift class="gift py-5" style=padding-top:100px>
+<div class=container>
+<div class="row justify-content-center">
+<div class="col-md-8 col-10 text-center">
+<h2 class=huruf-sambung style=color:#393e46>Wedding Gift</h2>
+<p>
+Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui rekening di bawah ini.
+</p>
+</div>
+<div class="col-lg-6 text-center">
+<button type=button class="btn btn-lg btn-pink mb-4 rounded-pill" data-bs-toggle=collapse data-bs-target=#collapseHadiah>
+<i class="fa fa-fw fa-gift"></i> Kirim Hadiah
+</button>
+<div class=collapse id=collapseHadiah>
+<div class="gift body">
+<div class=container2>
+<header>
+<span class=logo-mandiri>
+<img src=img/Mandiri.png alt="Logo Mandiri">
+</span>
+<img src=img/chip.png alt=Chip class=chip style=margin-top:1rem>
+</header>
+<div class=card-detail>
+<div class=name-number style=margin-bottom:7rem;margin-left:1.5rem>
+<h5 class=number>9000 0438 37781</h5>
+<div class=valid-date style=margin-left:.1rem>
+<h6>
+Valid <br>
+Thru
+</h6>
+<h5 style=margin-left:.7rem;margin-top:.2rem>
+25/01/25
+</h5>
+</div>
+<h6 class=name>IPUTU BUDHI DIOVIAN</h6>
+</div>
+<img class=logo2-visa src=img/Visa.png alt="Visa Logo">
+</div>
+<a style=cursor:pointer onclick=copyText(this) class="copy-button btn btn-light mt-3">
+<i class="fas fa-fw fa-copy"></i> Copy
+</a>
+</div>
+</div>
+<div class="gift body" style=margin-top:1rem>
+<div class=container2>
+<header>
+<span class=logo>
+<img src="img/Logo BCA_Putih.png" alt="Logo BCA">
+</span>
+<img src=img/chip.png alt=Chip class=chip>
+</header>
+<div class=card-detail>
+<div class=name-number style=margin-bottom:7rem;margin-left:1.5rem>
+<h5 class=number>773 525 2020</h5>
+<div class=valid-date style=margin-left:.1rem>
+<h6>
+Valid <br>
+Thru
+</h6>
+<h5 style=margin-left:.7rem;margin-top:.2rem>
+25/01/25
+</h5>
+</div>
+<h6 class=name>FIDELIA VERA SENTOSA</h6>
+</div>
+<img class=logo2 src=img/logo.png alt=Logo>
+</div>
+<a style=cursor:pointer onclick=copyText(this) class="copy-button btn btn-light mt-3">
+<i class="fas fa-fw fa-copy"></i> Copy
+</a>
+</div>
+</div>
+<div class="gift body text-center mt-4">
+<h3 class=huruf-sambung style=color:#393e46>
+<span style="font-family:Playfair Display;font-weight:700">
+Terima Kasih
+</span>
+<br>
+<span style="font-size:1.5rem;font-family:Work Sans;font-weight:400">
+Kami yang berbahagia,
+</span>
+<br>
+<span style=font-family:Charm;font-size:2rem;font-weight:600>Vian & Vera.</span>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class=container>
+<div class=row>
+<div class="col text-center">
+<small class=block>&copy; 2025 Vian & Vera. All Rights Reserved.</small>
+<small class=block>Designed by
+<a href="https://www.instagram.com/leonrdvan_?igsh=MXZidDJ1N3R3bDVlbg==">@Leonard Van</a>.</small>
+</div>
+</div>
+</div>
+</footer>
+<div id=audio-container>
+<audio id=song autoplay loop>
+<source src="audio/Its Been a Long Long Time Instrumental.mp3" type=audio/mp3>
+</audio>
+<div class=audio-icon-wrapper style=display:none>
+<i class="bi bi-disc"></i>
+</div>
+</div>
+<script src=scripts.js></script>
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js integrity=sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js></script>
+<script src=https://unpkg.com/aos@2.3.1/dist/aos.js></script>
+<script>var countdownDate=new Date("Jan 25, 2025 14:00:00").getTime(),x=setInterval((function(){var e=(new Date).getTime(),n=countdownDate-e;if(n<0)return clearInterval(x),void(document.getElementById("countdown-wedding").innerHTML='<div class="col-12 text-center">\n         <h5>Acara telah dimulai!</h5>\n       </div>');var t=Math.floor(n/864e5),d=Math.floor(n%864e5/36e5),l=Math.floor(n%36e5/6e4),i=Math.floor(n%6e4/1e3);document.getElementById("countdown-wedding").innerHTML=`\n    <div class="col-lg-1 col-3">\n      <div class="text-center p-2 rounded text-light">\n        <h5>${t}</h5> Hari\n      </div>\n    </div>\n    <div class="col-lg-1 col-3">\n      <div class="text-center p-2 rounded text-light">\n        <h5>${d}</h5> Jam\n      </div>\n    </div>\n    <div class="col-lg-1 col-3">\n      <div class="text-center p-2 rounded text-light">\n        <h5>${l}</h5> Menit\n      </div>\n    </div>\n    <div class="col-lg-1 col-3">\n      <div class="text-center p-2 rounded text-light">\n        <h5>${i}</h5> Detik\n      </div>\n    </div>`}),1e3)</script>
+</body>
 </html>
